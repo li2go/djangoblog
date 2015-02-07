@@ -1,0 +1,12 @@
+<!Doctype>
+<html>
+<head><title>REGISTER</title></head>
+<body>
+   <form method="post" enctype="mutipart/form-data">{% csrf_token %}
+
+   {{uf.as_p}}
+      <input type="submit" value="ok"/>
+   </form>
+   
+</body>
+</html>
