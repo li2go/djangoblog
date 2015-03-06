@@ -29,4 +29,7 @@ def register(request):
 	else:
 		uf = UserForm()
 	return render_to_response('register.html',{'uf':uf},context_instance=RequestContext(request))				
-
+def reg_wait():
+	pass
+def reg_active():	
+	pass

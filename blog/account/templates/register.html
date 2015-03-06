@@ -1,10 +1,11 @@
 <!Doctype>
 <html>
 <head><title>REGISTER</title></head>
+<link href="static/reigster.css">
 <body>
    <form method="post" enctype="mutipart/form-data">{% csrf_token %}
 
-   {{uf.as_p}}
+    {{uf.as_p}}
       <input type="submit" value="ok"/>
    </form>
    
