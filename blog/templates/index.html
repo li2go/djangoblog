@@ -251,15 +251,13 @@
         <ul class="page-diver">
             <div class="pagination">
                 <ul>
-                    {% for num in page_range %}
-                        
-                        <li><a href="?page={{num}}">{{num}}</a></li>
-                    {%endfor%}
+                    
                     {%if page_div.has_previous %}
                         <li style="text-align:center;"><a href="?page={{ page_div.previous_page_number }}"> 上一页</a></li>
                     {%endif%}
 
                 </ul>
+                <div></div>
             </div>
 
         </ul>

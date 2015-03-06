@@ -1,3 +1,4 @@
+#!coding:utf-8
 from django.shortcuts import render_to_response
 from django.core.paginator import Paginator,InvalidPage,EmptyPage
 
@@ -11,7 +12,7 @@ from django import template
 def index(request):
 	article=Article.objects.all()
 	PageSize=1
-	blogs=Paginator(article,PageSize)
+	blogs=Paginator(article,PageSize) 
 	page_range=blogs.page_range  #列表形式返回分数    ex:一共5分5页 self.page_range   return[1,2,3,4,5] 
 	try:
 		page = int(request.GET.get('page',1))
