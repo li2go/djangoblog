@@ -491,18 +491,18 @@ section#weekly {
 section#weekly h2 {
     padding: 30px 50px;
     text-align: left;
-    font-size: 30px
+    font-size: 1.3em;
 }
 section#weekly a {
     color: #1e4889
 }
 section#weekly code {
-    background: rgba(101, 137, 197, 0.74);
+    background: #3f3f3f;
     padding: 0 5px;
-    border-radius: 10px;
-    font-family: 'consolas';
-    margin: 0 10px;
-    color: #fff
+    border-radius: 0px;
+    /*font-family: 'consolas';*/
+    
+    
 }
 section#weekly .posts {
     padding-left: 50px;
@@ -513,6 +513,7 @@ section#weekly .posts li {
 }
 .content{
     max-width: 960px;
+    text-align: start;
 }
 .content img{
     margin: 0 25% 0 25%;
@@ -830,10 +831,7 @@ footer .social li:hover {
         padding: 0 10px;
         font-size: 14px
     }
-    section#weekly h2 {
-        font-size: 24px;
-        padding: 50px 30px 20px
-    }
+    
     section#weekly .posts {
         padding-left: 30px;
         font-size: 14px

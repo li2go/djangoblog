@@ -8,5 +8,6 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
 	config.extraPlugins = 'codesnippet';
-	codeSnippet_theme: 'zenburn';
+	config.codeSnippet_theme = 'zenburn';
+
 };
