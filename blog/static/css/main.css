@@ -138,6 +138,7 @@ section h2 {
     text-align: center;
     padding: 10px 0
 }
+
 section .btn {
     display: inline-block;
     border-radius: 10px;
@@ -163,6 +164,10 @@ section .btn.btn-start i {
 section#open {
     background: #db6968;
     text-align: center;
+
+}
+section#open h1{
+    margin-top:20%;
 }
 section#open h3 {
     font-size: 0;
@@ -481,6 +486,7 @@ section#join p {
 section#weekly {
     background: #cfe6ff;
     color: #1e4889;
+    overflow: scroll;
 }
 section#weekly h2 {
     padding: 30px 50px;
@@ -504,6 +510,25 @@ section#weekly .posts {
 section#weekly .posts li {
     margin-bottom: 20px;
     list-style: disc
+}
+.content{
+    max-width: 960px;
+}
+.content img{
+    margin: 0 25% 0 25%;
+
+}
+.page-diver{
+    
+    width: 20vw;
+    margin:20 auto;
+}
+
+
+.pagination li{
+    float:left;
+    margin-left: 20px;
+
 }
 footer {
     position: fixed;
