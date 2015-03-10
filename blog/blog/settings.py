@@ -93,3 +93,23 @@ STATICFILES_DIRS = (
 MEDIA_URL = "/media/"
 MEDIA_ROOT=os.path.join(BASE_DIR,'media').replace('\\','/')  
 CKEDITOR_UPLOAD_PATH = "article"
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': (
+            ['div','Source','-','Save','NewPage','Preview','-','Templates','CodeSnippet'], 
+            ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print','SpellChecker','Scayt'], 
+            ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'], 
+            ['Form','Checkbox','Radio','TextField','Textarea','Select','Button', 'ImageButton','HiddenField'], 
+            ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'], 
+            ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'], 
+            ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'], 
+            ['Link','Unlink'], 
+            ['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'], 
+            ['Styles','Format','Font','FontSize'], 
+            ['TextColor','BGColor'], 
+            ['Maximize','ShowBlocks','-','About', 'pbckcode'],
+            
+        ),
+    }
+}
