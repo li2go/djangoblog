@@ -58,6 +58,7 @@ var CKBUILDER_CONFIG = {
 		'colorbutton' : 1,
 		'colordialog' : 1,
 		'contextmenu' : 1,
+		
 		'dialogadvtab' : 1,
 		'div' : 1,
 		'elementspath' : 1,
