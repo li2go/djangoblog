@@ -124,30 +124,7 @@ $(function() {
 	})();
 
 	/* init weekly */
-	/*(function() {
-		var tpl = (function() {/*
-			<ul class="posts">
-	            <% _.each(weekly, function(post) { %>
-	                <li>
-	                    <a href="<%- post.html_url %>" target="_blank"><%- post.name.replace('.md', '') %></a>
-	                </li>
-	            <% }) %>
-	        </ul>
-		*//*}).toString().match(/[^]*\/\*([^]*)\*\/\}$/)[1];
-
-		$.ajax({
-			url: 'https://api.github.com/repos/Baidu-Music-FE/fe-weekly/contents',
-			dataType: 'jsonp'
-		}).done(function(rs) {
-			var posts = rs.data;
-			if (posts.length > 0) {
-				_.remove(posts, function(item) {
-					return item.name == 'img' || item.name == 'readme.md'
-				});
-				$('#weekly').append( _.template(tpl, {weekly: posts.reverse()}) )
-			}
-		});
-
-	})();*/
+	
+	
 
 });
