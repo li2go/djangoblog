@@ -348,22 +348,11 @@
         };
         return Particle
     }();
-    // jQuery.getJSON("http://ysmood.org:7013/words80", function(words) {
-    //     var sphere;
-    //     window.ys = {};
-    //     // ys.words = words.map(function(el) {
-    //     //     return el.replace("\n", "<br>")
-    //     // });
-    //     sphere = new Sphere;
-    //     sphere.animate();
-    //     return ys.sphere = sphere
-    // })
+    
 
     var sphere;
         window.mfe = {};
-        // ys.words = words.map(function(el) {
-        //     return el.replace("\n", "<br>")
-        // });
+        
         sphere = new Sphere(document.querySelector('#sphere-bg'));
         sphere.animate();
         return mfe.sphere = sphere
