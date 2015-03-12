@@ -1,0 +1,18 @@
+{%extends 'djangoblog/head.html'%}
+{%block footer%}
+<footer id="blog_foot" class="cf">
+  <ul id="foot_links">
+    <li><a href="https://http://weibo.com/CGiSmyLove">@WEIBO</a></li>
+    <li><a href="mailto:hello@baoziv587.com?subject=Hi,">say hello</a></li>
+    <li><a href="http://baoziv587.com" rel="nofollow">baoziv587.com</a></li>
+  </ul>
+  <figure id="user_foot"><a href="/">@Davegao</a></figure>
+  <h5><a href="baoziv587.com/blog">Davegao</a></h5>
+</footer>
+<footer id="foot">
+  <figure id="logo_foot"><a href="https://www.djangoproject.com">POWER by django</a></figure>
+</footer><div id="lights">&nbsp;</div>
+<!--  script-->
+<script src="{{STATIC_URL}}ckeditor/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+{%endblock%}

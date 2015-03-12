@@ -1,0 +1,58 @@
+<html lang="en" ><head>
+  <meta charset="utf-8">
+  <title>gram.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../static/css/blog/main.css">
+  <link href="../static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/zenburn.css" rel="stylesheet">   
+  <link href="../static/css/blog/detail.css" rel="stylesheet"> 
+</head>
+<body class="overlord blog loaded overlord_done">
+<!-- head#-->
+<div id="whiteout"></div>
+<header id="user_top" class="cf ">
+  <figure id="user_logo"><a href="//blog.markfayngersh.com">汪汪汪</a></figure>
+  <h2><a href="//blog.markfayngersh.com">汪汪汪</a></h2>
+  <h3>Write Python.Javascript,Html <br>programming for fun
+</h3>
+  <ul id="user_links">
+    <li><a href="http://weibo.com/CGisMylove">@微博</a></li>
+    <li><a href="mailto:hello@baoziv587.com?subject=hello,gaoxiang">say hi</a></li>
+    <li><a href="http://baoziv587.com" >baoziv587.com</a></li>
+  </ul>
+</header> 
+<!-- blogs loop render -->
+<section id="container" class="blog user_home">
+{%for blog in blogs%}
+  <hr class="articlesplit">
+  <article id="bTTEsKLGH6b66psAPwbs" class="post">
+    <time datetime="2014-03-20" class="article_time">{{blog.timestamp|date:"Y.m.d  h:i"}}</time>
+    <h1 class="article_title">
+    <a href="{% url 'blog:detail' blog.id %}">
+    {{blog.title}}  
+    </a></h1>
+    <a href="{{url }}" class="content">
+    <p>{{blog.content|safe}}</p>
+    </a>
+    <p class="continue_mark"><a href="{% url 'blog:detail' blog.id%}" class="buttonize outline small">Continue reading →</a></p>
+  </article>
+  {%endfor%}
+
+  </article>- 
+  </section>
+<footer id="blog_foot" class="cf">
+  <ul id="foot_links">
+    <li><a href="https://twitter.com/pheuter">@pheuter</a></li>
+    <li><a href="mailto:mark.fayngersh@gmail.com?subject=Svbtle">say hello</a></li>
+    <li><a href="http://markfayngersh.com" rel="nofollow">markfayngersh.com</a></li>
+  </ul>
+  <figure id="user_foot"><a href="/">Svbtle</a></figure>
+  <h5><a href="//blog.markfayngersh.com">Mark Fayngersh</a></h5>
+</footer>
+<footer id="foot">
+  <figure id="logo_foot"><a href="https://svbtle.com">Svbtle</a></figure>
+</footer><div id="lights">&nbsp;</div>
+<!--  script-->
+<script src="../static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

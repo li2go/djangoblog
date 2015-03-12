@@ -19,7 +19,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -85,10 +85,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT=os.path.join(BASE_DIR, 'statics_file')
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR,'static').replace('\\','/'),
-    #'/var/local/blog/blog/static'
-)
+#STATICFILES_DIRS = '/var/local/blog/blog/static'
+STATICFILES_DIRS =os.path.join(BASE_DIR,'static').replace('\\','/'),
+    
+
+
 #media
 MEDIA_URL = "/media/"
 MEDIA_ROOT=os.path.join(BASE_DIR,'media').replace('\\','/')  
@@ -98,17 +99,18 @@ CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': (
             ['div','Source','-','Save','NewPage','Preview','-','Templates','CodeSnippet'], 
-            ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print','SpellChecker','Scayt'], 
+           # ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print','SpellChecker','Scayt'], 
             ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'], 
-            ['Form','Checkbox','Radio','TextField','Textarea','Select','Button', 'ImageButton','HiddenField'], 
-            ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'], 
+            #['Form','Checkbox','Radio','TextField','Textarea','Select','Button', 'ImageButton','HiddenField'], 
+            ['Textarea'],
+            ['Bold','Italic','Underline','Strike','-',], 
             ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'], 
             ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'], 
-            ['Link','Unlink'], 
-            ['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'], 
+            #['Link','Unlink'], 
+            ['Image'],#['Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'], 
             ['Styles','Format','Font','FontSize'], 
             ['TextColor','BGColor'], 
-            ['Maximize','ShowBlocks','-','About', 'pbckcode'],
+            ['Maximize','-','ShowBlocks','-']#['About', 'pbckcode'],
             
         ),
     }

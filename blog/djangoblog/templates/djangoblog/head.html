@@ -1,0 +1,43 @@
+
+<html lang="en" ><head>
+  <meta charset="utf-8">
+  <title>gram.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/blog/main.css">
+  <link href="{{STATIC_URL}}ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/zenburn.css" rel="stylesheet">  
+  <link href="{{STATIC_URL}}css/blog/detail.css" rel="stylesheet"> 
+</head>
+<body class="overlord blog loaded overlord_done">
+{%block css%}
+{%endblock %}
+<!-- head#-->
+<!-- blogs loop render -->
+<section id="container" class="blog user_home">
+  <hr class="articlesplit">
+  <article id="bTTEsKLGH6b66psAPwbs" class="post">
+    <time class="article_time">
+    {%block time%}
+    {{blog.timestamp|date:"Y.m.d  h:i"}}
+    {%endblock%}</time>
+    <h1 class="article_title">
+    <a href="{%block link%} {%endblock%}">
+    {%block title%}
+    {{blog.title}}
+    {%endblock%}  
+    </a></h1>
+    <a href="{{url }}" class="content"></a>
+    <p>
+    {%block content%}
+    {{blog.content|safe}}
+    {%endblock%}
+    </p>
+    
+  </article>
+  
+
+  </article>- 
+  </section>
+{%block footer%}
+{%endblock%}
+</body>
+</html>

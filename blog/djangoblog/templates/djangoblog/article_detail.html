@@ -1,0 +1,13 @@
+{%extends 'djangoblog/footer.html'%}
+{% if article %}
+  
+   {%block time%}
+   {{article.timestamp|date:"Y.m.d  h:i"}}
+   {%endblock%}
+   {%block title%}<a>{{article.title}}</a>{%endblock%}
+   {%block content%}<h6>{{article.content|safe}}</h6>{%endblock%}
+   
+
+{% else %}
+    <a>文章没找到.</a>
+{% endif %}
