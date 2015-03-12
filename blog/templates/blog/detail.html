@@ -1,0 +1,13 @@
+{%extends 'blog/head.html'%}
+{% if article %}
+   <article>
+   {%block time%}
+   {{article.timestamp|date:"Y.m.d  h:i"}}
+   {%endblock%}
+   {%block title%}<a>{{article.title}}</a>{%endblock%}
+   {%block content%}<h6>{{article.content|safe}}</h6>{%endblock%}
+   </article>	
+
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

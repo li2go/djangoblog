@@ -1,0 +1,123 @@
+<html lang="en" ><head>
+  <meta charset="utf-8">
+  <title>gram.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/css/blog/main.css">
+  <link href="{{STATIC_URL}}ckeditor/ckeditor/plugins/codesnippet/lib/highlight/styles/zenburn.css" rel="stylesheet">  
+  <link href="{{STATIC_URL}}css/blog/detail.css"> 
+</head>
+<body class="overlord blog loaded overlord_done">
+<style>
+figure.avatar a,
+figure#user_logo a,
+figure#user_foot a,
+nav#overlord.user_top figure#logo_top a,
+figure.kudo.complete div.filling {
+  background-image:#F61B5C;
+}
+
+figure.kudo.activated div.filling,
+figure.kudo.complete div.filling {
+  background-color: #F61B5C;
+}
+
+figure.kudo.activated a,
+figure.kudo.complete a {
+  border-color: #F61B5C;
+}
+
+blockquote,
+a blockquote,
+div#readnext:hover span.flank_title,
+div#foot_more:hover a,
+div#foot_userbar a#bottom_tagline span:hover,
+article.linked h1.article_title a:hover,
+a.continue_button:hover,
+article p a:hover,
+ul#lightning_drop,
+figure#user_logo,
+figure#user_foot,
+ul#user_links li a:hover,
+ul#foot_links li a:hover,
+a.buttonize:hover,
+button.buttonize:hover,
+a.buttonize.outline:hover,
+button.buttonize.outline:hover,
+nav.pagination span.next a:hover,
+nav.pagination span.prev a:hover,
+section#readnext:hover p span,
+nav#overlord.user_top figure#logo_top {
+  border-color: #F61B5C;
+}
+
+figure.avatar,
+nav#overlord.user_top figure#logo_top a,
+ul#user_links li a:hover,
+ul#foot_links li a:hover,
+a.buttonize:hover,
+button.buttonize:hover,
+a.buttonize.outline:hover,
+button.buttonize.outline:hover,
+nav.pagination span.next a:hover,
+nav.pagination span.prev a:hover,
+figure#user_logo a,
+figure#user_foot a  {
+	background-color: #F61B5C;
+}
+
+h6.separator_title.read_first,
+header#user_top h2 a,
+footer#blog_foot h5 a,
+article.post h1 a:hover,
+div.preview strong,
+nav#overlord h2#nav_title.user_top a,
+section#readnext:hover h3,
+section#readnext:hover p span {
+  color: #F61B5C;
+}
+
+</style>
+<!-- head#-->
+<!-- blogs loop render -->
+<section id="container" class="blog user_home">
+  <hr class="articlesplit">
+  <article id="bTTEsKLGH6b66psAPwbs" class="post">
+    <time class="article_time">
+    {%block time%}
+    {{blog.timestamp|date:"Y.m.d  h:i"}}
+    {%endblock%}</time>
+    <h1 class="article_title">
+    <a href="{%block link%} {%endblock%}">
+    {%block title%}
+    {{blog.title}}
+    {%endblock%}  
+    </a></h1>
+    <a href="{{url }}" class="content"></a>
+    <p>
+    {%block content%}
+    {{blog.content|safe}}
+    {%endblock%}
+    </p>
+    
+  </article>
+  
+
+  </article>- 
+  </section>
+<footer id="blog_foot" class="cf">
+  <ul id="foot_links">
+    <li><a href="https://http://weibo.com/CGiSmyLove">@WEIBO</a></li>
+    <li><a href="mailto:hello@baoziv587.com?subject=Hi,">say hello</a></li>
+    <li><a href="http://baoziv587.com" rel="nofollow">baoziv587.com</a></li>
+  </ul>
+  <figure id="user_foot"><a href="/">@Davegao</a></figure>
+  <h5><a href="baoziv587.com/blog">Davegao</a></h5>
+</footer>
+<footer id="foot">
+  <figure id="logo_foot"><a href="https://www.djangoproject.com">POWER by django</a></figure>
+</footer><div id="lights">&nbsp;</div>
+<!--  script-->
+<script src="{{STATIC_URL}}/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
