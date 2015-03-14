@@ -1,12 +1,21 @@
+#coding:utf-8
 """
-Django settings for blog project.
+                        Django settings for blog project.
+=================================================================================================================
+    用到的第三方库:
 
+    SQL  Table TRANSFORM TOOL        |south               :  (http://south.aeracode.org)
+    RichTextEditor                   |django-ckEditor     :  (https://github.com/shaunsephton/django-ckeditor)   
+    Library for  ckEditor            |Pillow              :  (pip install Pillow)
+    Django  Api Tool                 |django_tastypie     :  (http://django-tastypie.readthedocs.org/en/latest/)
+              
+=================================================================================================================             
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
+#模板路径
 TEMPLATE_DIRS = os.path.join(BASE_DIR, 'templates').replace('\\','/')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -34,6 +43,7 @@ INSTALLED_APPS = (
     'djangoblog',
     'account',
     'blog',
+    'south',
     'django.contrib.staticfiles'
 )
 
@@ -94,7 +104,9 @@ STATICFILES_DIRS =os.path.join(BASE_DIR,'static').replace('\\','/'),
 MEDIA_URL = "/media/"
 MEDIA_ROOT=os.path.join(BASE_DIR,'media').replace('\\','/')  
 CKEDITOR_UPLOAD_PATH = "article"
-
+"""
+==============================                   Ck_Editor        ====================================================
+"""
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': (
