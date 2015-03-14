@@ -28,11 +28,11 @@
     <time datetime="2014-03-20" class="article_time">{{blog.timestamp|date:"Y.m.d  h:i"}}</time>
     <h1 class="article_title">
     <a href="{% url 'blog:detail' blog.id %}">
-    {{blog.title}}  
+    {{blog.title|title}}  
     </a></h1>
-    <a href="{{url }}" class="content">
-    <p>{{blog.content|safe}}</p>
-    </a>
+    
+    <p>{{blog.content|safe|truncatechars:350}}</p>
+    
     <p class="continue_mark"><a href="{% url 'blog:detail' blog.id%}" class="buttonize outline small">Continue reading →</a></p>
   </article>
   {%endfor%}
@@ -41,15 +41,15 @@
   </section>
 <footer id="blog_foot" class="cf">
   <ul id="foot_links">
-    <li><a href="https://twitter.com/pheuter">@pheuter</a></li>
-    <li><a href="mailto:mark.fayngersh@gmail.com?subject=Svbtle">say hello</a></li>
-    <li><a href="http://markfayngersh.com" rel="nofollow">markfayngersh.com</a></li>
+    <li><a href="https://http://weibo.com/CGiSmyLove">@WEIBO</a></li>
+    <li><a href="mailto:hello@baoziv587.com?subject=Hi,">say hello</a></li>
+    <li><a href="http://baoziv587.com" rel="nofollow">baoziv587.com</a></li>
   </ul>
-  <figure id="user_foot"><a href="/">Svbtle</a></figure>
-  <h5><a href="//blog.markfayngersh.com">Mark Fayngersh</a></h5>
+  <figure id="user_foot"><a href="/">@Davegao</a></figure>
+  <h5><a href="baoziv587.com/blog">Davegao</a></h5>
 </footer>
 <footer id="foot">
-  <figure id="logo_foot"><a href="https://svbtle.com">Svbtle</a></figure>
+  <figure id="logo_foot"><a href="https://www.djangoproject.com">POWER by django</a></figure>
 </footer><div id="lights">&nbsp;</div>
 <!--  script-->
 <script src="../static/ckeditor/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
