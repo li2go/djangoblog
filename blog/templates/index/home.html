@@ -71,39 +71,6 @@
                     </div>
                 </a>
             </li>
-            <li>
-                <a target="_blank" href="http://labs.music.baidu.com/demo/audiolab/?p=2">
-                    <div class="thumb" style="background-image: url(img/labs/ktv.jpg)"></div>
-                    <div class="info">
-                        <p class="title">在线K歌</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a target="_blank" href="http://labs.music.baidu.com/demo/audiolab/?p=1">
-                    <div class="thumb" style="background-image: url(img/labs/music_eq.jpg)"></div>
-                    <div class="info">
-                        <p class="title">音效增强</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a target="_blank" href="http://labs.music.baidu.com/demo/audiolab/?p=4">
-                    <div class="thumb" style="background-image: url(img/labs/web_piano.jpg)"></div>
-                    <div class="info">
-                        <p class="title">Web钢琴</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a target="_blank" href="http://labs.music.baidu.com/demo/audiolab/?p=6">
-                    <div class="thumb" style="background-image: url(img/labs/ring_maker.png)">
-                    </div>
-                    <div class="info">
-                        <p class="title">铃声裁剪</p>
-                    </div>
-                </a>
-            </li>
         </ul>
     </section>
 
@@ -117,32 +84,12 @@
     <section id="weekly" class="pt-page">
         <h2 class="animated" data-animation="zoomIn">NOT FOO AND BAR<br> ONLY FUCK AND SHIT</h2>
         {% block content %}
-      <div class="content" style="margin:0 auto;">
-        {% for blog in page_div %}
-          <h1>{{blog.title}}</h1>
-        <div>
-          {{blog.content|safe}}
-        </div> 
-        <ul class="page-diver">
-            <div class="pagination">
-                <ul>
-                    
-                    {%if page_div.has_previous %}
-                        <li><a href="?page={{ page_div.previous_page_number }}"> 上一页</a></li>
-                    {%endif%}
-                    {% for num in page_range%}
-                        <li><a href="?page={{num}}"> {{num}}</a></li>
-                    {% endfor%}
-                    {%if page_div.has_next%}
-                        <li><a href="?page={{ page_div.next_page_number }}">下一页</a></li>
-                    {%endif%}
-                </ul>
-                <div></div>
-            </div>
-
-        </ul>        
-        {% endfor%}   
-      
+      <div class="content" style="margin:0 auto;">        
+          <ul>
+            {%for blog in blogs%}
+            <li><a href="blog/{{blog.id}}"><h5>{{blog.title}}</h5></a></li>
+            {% endfor%}
+          </ul>         
       </div>
   {% endblock %}
         
